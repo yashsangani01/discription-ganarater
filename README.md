@@ -1,36 +1,67 @@
-7# Product Description Generator
+# discription-ganarater
 
-A modern Flask web application that generates creative product descriptions using OpenAI's GPT-4o-mini model.
+A small Flask web app that generates creative product descriptions using the OpenAI API.
+
+## Summary
+
+- Web form UI that accepts a product name or short prompt and returns a generated product description.
+- Built with Flask (backend), vanilla JavaScript (frontend), and the OpenAI API for generation.
 
 ## Features
 
-- Clean, responsive web interface with modern styling
-- Asynchronous form submission (no page reload)
-- Real-time loading indicators
-- Error handling for API connections
-- Input validation
-- Built with Flask, OpenAI API, and vanilla JavaScript
+- Clean, responsive UI
+- Asynchronous form submission with loading state
+- Basic input validation and error handling
 
-## Setup
+## Quickstart
 
-1. Clone or download the project.
-2. Create a virtual environment: `python -m venv .venv`
-3. Activate the virtual environment: `.venv\Scripts\activate` (Windows)
-4. Install dependencies: `pip install -r requirements.txt`
-5. Create a `.env` file and add your OpenAI API key: `OPENAI_API_KEY=your_key_here`
-6. Run the app: `python app.py/app.py`
+1. Clone the repo.
+2. Create and activate a virtual environment (Linux/macOS):
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Create a `.env` file in the project root and set your OpenAI API key:
+
+```text
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+5. Run the application:
+
+```bash
+python app.py/app.py
+```
+
+Open http://127.0.0.1:5000/ in your browser.
 
 ## Usage
 
-- Open your browser and go to `http://127.0.0.1:5000/`
-- Enter a product name and click "Generate" to get a description.
+- Enter a product name or short prompt and click "Generate" to receive a description from the model.
 
-## Requirements
+## Project structure
 
-- Python 3.x
-- OpenAI API key
-- Internet connection for API calls
+- `app.py/` — application entrypoint and Flask code
+- `requirements.txt` — Python dependencies
+
+## Notes
+
+- Ensure your machine has internet access for API calls and your OpenAI key has quota.
+- If you prefer Flask's development server, set `FLASK_ENV=development` and run with `flask run` (adjust `FLASK_APP` as needed).
+
+## Contributing
+
+- Feel free to open issues or PRs for bug fixes, improvements, or additional features.
 
 ## License
 
-This project is for educational purposes.
+This repository is provided for educational purposes.
+
