@@ -57,6 +57,8 @@ Open http://127.0.0.1:5000/ in your browser.
 - Ensure your machine has internet access for API calls and your OpenAI key has quota.
 - If you prefer Flask's development server, set `FLASK_ENV=development` and run with `flask run` (adjust `FLASK_APP` as needed).
 
+**Security note:** Never commit secrets (like `OPENAI_API_KEY`) into the repository. Use a local `.env` file that is listed in `.gitignore` and add production secrets into GitHub repository **Secrets** (Settings → Secrets → Actions) when using GitHub Actions or other CI. If you accidentally committed a secret, revoke/rotate it immediately.
+
 ## Contributing
 
 - Feel free to open issues or PRs for bug fixes, improvements, or additional features.
